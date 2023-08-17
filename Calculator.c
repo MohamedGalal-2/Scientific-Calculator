@@ -3,7 +3,7 @@
 #include <math.h>
 /*
 ***************************************************
-*Program: Simple Calculator				          *
+*Program: Simple Calculator	                  *
 *Version: V2.0                                    *
 *Date: 17/08/2023                                 *
 *************************************************** */
