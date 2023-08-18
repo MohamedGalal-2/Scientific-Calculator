@@ -1,17 +1,20 @@
+/*Include Section*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-/*
-***************************************************
-*Program: Simple Calculator	                  *
-*Version: V2.0                                    *
-*Date: 17/08/2023                                 *
-*************************************************** */
+#define M_PI 3.14159265358979323846
+
+/**************************************************
+*Creator: Mohamed Galal                           *
+*Program: Simple Calculator				          *
+*Version: V2.3.0                                  *
+*Last Update: 18/08/2023                          *
+**************************************************/
 
 /*Global Variables Section*/
-float Number_1, Number_2, Result;
+float Number_1, Number_2, Result, Degree, Radian;
 int Number_3, Number_4, Result_2 = 1;
-unsigned short int conv, op_2, op;
+unsigned short int conv, op_2, op, trig_op;
 
 /*Decleration Section*/
 float Summution(float, float);
@@ -19,9 +22,9 @@ float Subtraction(float, float);
 float Multiplication(float, float);
 float Division(float, float);
 float Power(float, float);
-float Modulus(float, float);
+int Modulus(int, int);
 float Square_Root(float);
-float Factorial(int);
+int Factorial(int);
 float Length(unsigned short int, float);
 float Area(unsigned short int, float);
 float Volume(unsigned short int, float);
@@ -31,11 +34,14 @@ float Pressure(unsigned short int, float);
 float Energy(unsigned short int, float);
 float Power_2(unsigned short int, float);
 float Temperature(unsigned short int, float);
+float Rad(float);
+float Trig(unsigned short int, unsigned short int, float);
 
+/*Main Functtion*/
 int main() {
-	while (op !=10) {
+	while (op !=12) {
 		printf("Please choose the operation you want to perform : \n");
-		printf("1. Summution\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power\n6. Modulus\n7. Square root\n8. Factorial\n9. Units Conversion\n10. Exit\n");
+		printf("1. Summution\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power\n6. Modulus\n7. Square root\n8. Factorial\n9. Units Conversion\n10. Trignometric Functions\n11. Log\n12. Exit\n");
 		scanf_s("%d", &op);
 
 		switch (op) {
@@ -61,7 +67,7 @@ int main() {
 			break;
 		case 6:
 			printf("Modulus:\n");
-			Modulus(Number_1, Number_2);
+			Modulus(Number_3, Number_4);
 			break;
 		case 7:
 			printf("Square Root:\n");
@@ -72,6 +78,7 @@ int main() {
 			Factorial(Number_3);
 			break;
 		case 9: 
+			Conversions:
 			while (op_2 !=10) {
 				printf("Units Conversion:\n");
 				printf("Choose the physical quantity you want to convert: \n");
@@ -117,12 +124,18 @@ int main() {
 					break;
 				}
 				else {
-					printf("Please enter a valid operation\n");
-					break;
+					printf("Please enter a valid quantity\n");
+					goto Conversions;
 				}
 			}
 			break;
 		case 10:
+			Trig(conv, trig_op, Number_1);
+			break;
+		case 11:
+			Log(Number_1);
+			break;
+		case 12:
 			break;
 		default:
 			printf("Please enter a valid operation\n");
@@ -132,6 +145,7 @@ int main() {
 	return 0;
 }
 
+/*Functions Section*/
 float Summution(float Number_1, float Number_2) {
 	printf("Please enter the fist number: ");
 	scanf_s("%f", &Number_1);
@@ -231,7 +245,7 @@ int Factorial(int Number_3) {
 	Result_2 = 1;
 }
 
-float Length(int conv, float Number_1) {
+float Length(unsigned short int conv, float Number_1) {
 	float Result;
 	printf("Length:\n");
 	printf("Choose the unit you want to convert from: \n");
@@ -290,7 +304,7 @@ float Length(int conv, float Number_1) {
 	}
 }
 
-float Area(int conv, float Number_1) {
+float Area(unsigned short int conv, float Number_1) {
 	float Result;
 	printf("Area:\n");
 	printf("Choose the unit you want to convert from: \n");
@@ -313,7 +327,7 @@ float Area(int conv, float Number_1) {
 	}
 }
 
-float Volume(int conv, float Number_1) {
+float Volume(unsigned short int conv, float Number_1) {
 	float Result;
 	printf("Volume:\n");
 	printf("Choose the unit you want to convert from: \n");
@@ -348,7 +362,7 @@ float Volume(int conv, float Number_1) {
 	}
 }
 
-float Mass(int conv, float Number_1) {
+float Mass(unsigned short int conv, float Number_1) {
 	float Result;
 	printf("Mass:\n");
 	printf("Choose the unit you want to convert from: \n");
@@ -383,7 +397,7 @@ float Mass(int conv, float Number_1) {
 	}
 }
 
-float Velocity(int conv, float Number_1) {
+float Velocity(unsigned short int conv, float Number_1) {
 	float Result;
 	printf("Velocity:\n");
 	printf("Choose the unit you want to convert from: \n");
@@ -406,7 +420,7 @@ float Velocity(int conv, float Number_1) {
 	}
 }
 
-float Pressure(int conv, float Number_1) {
+float Pressure(unsigned short int conv, float Number_1) {
 	float Result;
 	printf("Pressure:\n");
 	printf("Choose the unit you want to convert from: \n");
@@ -465,7 +479,7 @@ float Pressure(int conv, float Number_1) {
 	}
 }
 
-float Energy(int conv, float Number_1) {
+float Energy(unsigned short int conv, float Number_1) {
 	float Result;
 	printf("Energy:\n");
 	printf("Choose the unit you want to convert from: \n");
@@ -500,7 +514,7 @@ float Energy(int conv, float Number_1) {
 	}
 }
 
-float Power_2(int conv, float Number_1) {
+float Power_2(unsigned short int conv, float Number_1) {
 	float Result;
 	printf("Power:\n");
 	printf("Choose the unit you want to convert from: \n");
@@ -523,7 +537,7 @@ float Power_2(int conv, float Number_1) {
 	}
 }
 
-float Temperature(int conv, float Number_1) {
+float Temperature(unsigned short int conv, float Number_1) {
 	float Result;
 	printf("Energy:\n");
 	printf("Choose the unit you want to convert from: \n");
@@ -570,3 +584,155 @@ float Temperature(int conv, float Number_1) {
 	}
 }
 
+float Rad(float Degree) {
+	return Radian = Degree * (M_PI / 180.0);
+}
+
+float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) {
+	float Result, Degree;
+	while (conv != 7) {
+		printf("Please enter the trignometric function you want: \n");
+		printf("1. sin\n2. cos\n3. tan\n4. cot\n5. sec\n6. cosec\n7. Exit\n");
+		scanf_s("%d", &conv);
+		if (conv == 1) {
+			printf("Choose Rad for radians or Deg for degrees: \n");
+			printf("1. Rad\n2. Deg\n");
+			scanf_s("%d", &trig_op);
+			if (trig_op == 1) {
+				printf("Please enter the radian value: ");
+				scanf_s("%f", &Number_1);
+				Result = sin(Number_1);
+				printf("Sin(%f) = %f\n", Number_1, Result);
+			}
+			else if (trig_op == 2) {
+				printf("Please enter the degree: ");
+				scanf_s("%f", &Number_1);
+				Degree = Number_1;
+				Number_1 = Rad(Number_1);
+				Result = sin(Number_1);
+				printf("Sin(%f) = %f\n", Degree, Result);
+			}
+			else {
+				printf("Please enter a valid value!!\n");
+			}
+		}
+		else if (conv == 2) {
+			printf("Choose Rad for radians or Deg for degrees: \n");
+			printf("1. Rad\n2. Deg\n");
+			scanf_s("%d", &trig_op);
+			if (trig_op == 1) {
+				printf("Please enter the radian value: ");
+				scanf_s("%f", &Number_1);
+				Result = cos(Number_1);
+				printf("Cos(%f) = %f\n", Number_1, Result);
+			}
+			else if (trig_op == 2) {
+				printf("Please enter the degree: ");
+				scanf_s("%f", &Number_1);
+				Degree = Number_1;
+				Number_1 = Rad(Number_1);
+				Result = cos(Number_1);
+				printf("Cos(%f) = %f\n", Degree, Result);
+			}
+			else {
+				printf("Please enter a valid value!!\n");
+			}
+		}
+		else if (conv == 3) {
+			printf("Choose Rad for radians or Deg for degrees: \n");
+			printf("1. Rad\n2. Deg\n");
+			scanf_s("%d", &trig_op);
+			if (trig_op == 1) {
+				printf("Please enter the radian value: ");
+				scanf_s("%f", &Number_1);
+				Result = tan(Number_1);
+				printf("Tan(%f) = %f\n", Number_1, Result);
+			}
+			else if (trig_op == 2) {
+				printf("Please enter the degree: ");
+				scanf_s("%f", &Number_1);
+				Degree = Number_1;
+				Number_1 = Rad(Number_1);
+				Result = tan(Number_1);
+				printf("Tan(%f) = %f\n", Degree, Result);
+			}
+			else {
+				printf("Please enter a valid value!!\n");
+			}
+		}
+		else if (conv == 4) {
+			printf("Choose Rad for radians or Deg for degrees: \n");
+			printf("1. Rad\n2. Deg\n");
+			scanf_s("%d", &trig_op);
+			if (trig_op == 1) {
+				printf("Please enter the radian value: ");
+				scanf_s("%f", &Number_1);
+				Result = 1.0 / tan(Number_1);
+				printf("Cot(%f) = %f\n", Number_1, Result);
+			}
+			else if (trig_op == 2) {
+				printf("Please enter the degree: ");
+				scanf_s("%f", &Number_1);
+				Degree = Number_1;
+				Number_1 = Rad(Number_1);
+				Result = 1.0 / tan(Number_1);
+				printf("Cot(%f) = %f\n", Degree, Result);
+			}
+			else {
+				printf("Please enter a valid value!!\n");
+			}
+		}
+		else if (conv == 5) {
+			printf("Choose Rad for radians or Deg for degrees: \n");
+			printf("1. Rad\n2. Deg\n");
+			scanf_s("%d", &trig_op);
+			if (trig_op == 1) {
+				printf("Please enter the radian value: ");
+				scanf_s("%f", &Number_1);
+				Result = 1.0 / cos(Number_1);
+				printf("Sec(%f) = %f\n", Number_1, Result);
+			}
+			else if (trig_op == 2) {
+				printf("Please enter the degree: ");
+				scanf_s("%f", &Number_1);
+				Degree = Number_1;
+				Number_1 = Rad(Number_1);
+				Result = 1.0 / cos(Number_1);
+				printf("Sec(%f) = %f\n", Degree, Result);
+			}
+			else {
+				printf("Please enter a valid value!!\n");
+			}
+		}
+		else if (conv == 6) {
+			printf("Choose Rad for radians or Deg for degrees: \n");
+			printf("1. Rad\n2. Deg\n");
+			scanf_s("%d", &trig_op);
+			if (trig_op == 1) {
+				printf("Please enter the radian value: ");
+				scanf_s("%f", &Number_1);
+				Result = 1.0 / sin(Number_1);
+				printf("Cosec(%f) = %f\n", Number_1, Result);
+			}
+			else if (trig_op == 2) {
+				printf("Please enter the degree: ");
+				scanf_s("%f", &Number_1);
+				Degree = Number_1;
+				Number_1 = Rad(Number_1);
+				Result = 1.0 / sin(Number_1);
+				printf("Cosec(%f) = %f\n", Degree, Result);
+			}
+			else {
+				printf("Please enter a valid value!!\n");
+			}
+			}
+		}
+	}
+
+float Log(float Number_1) {
+	float Result;
+	printf("Please enter the value: ");
+	scanf_s("%f", &Number_1);
+	Result = log10(Number_1);
+	printf("Log10(%f) = %f \n", Number_1, Result);
+}
