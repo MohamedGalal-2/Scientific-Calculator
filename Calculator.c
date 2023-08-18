@@ -4,7 +4,8 @@
 #define M_PI 3.14159265358979323846
 
 /**************************************************
-*Program: Simple Calculator			  *
+*Creator: Mohamed Galal                           *
+*Program: Simple Calculator				          *
 *Version: V2.3.0                                  *
 *Last Update: 18/08/2023                          *
 **************************************************/
