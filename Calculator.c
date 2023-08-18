@@ -1,3 +1,4 @@
+/*Include Section*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -36,6 +37,7 @@ float Temperature(unsigned short int, float);
 float Rad(float);
 float Trig(unsigned short int, unsigned short int, float);
 
+/*Main Functtion*/
 int main() {
 	while (op !=12) {
 		printf("Please choose the operation you want to perform : \n");
@@ -143,6 +145,7 @@ int main() {
 	return 0;
 }
 
+/*Functions Section*/
 float Summution(float Number_1, float Number_2) {
 	printf("Please enter the fist number: ");
 	scanf_s("%f", &Number_1);
