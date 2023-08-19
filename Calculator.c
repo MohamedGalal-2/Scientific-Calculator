@@ -3,11 +3,19 @@
 #include <stdlib.h>
 #include <math.h>
 #define M_PI 3.14159265358979323846
+#define M_PHI 1.618033988749894
+#define M_C 299792458
+#define M_G 9.80665
+#define M_H 6.62607015
+#define M_ME 9.1093837015
+#define M_MP 1.67262192369
+#define AVOGADRO 6.02214076
+#define M_EC 1.602176634
 
 /**************************************************
 *Creator: Mohamed Galal                           *
 *Program: Simple Calculator		          *
-*Version: V2.5.0                                  *
+*Version: V2.6.0                                  *
 *Last Update: 19/08/2023                          *
 **************************************************/
 
@@ -40,6 +48,7 @@ float Log(float, float);
 float LN(float);
 float Exponential(float);
 float Hyperbolic(int, float);
+void Constants(int);
 
 /*Colors Section*/
 void red() {
@@ -66,52 +75,60 @@ void reset() {
 
 /*Main Function*/
 int main() {
-	while (op !=15) {
+	while (op !=16) {
 		cyan();
 		printf("Please choose the operation you want to perform : \n");
 		yellow();
-		printf("1. Summution\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power\n6. Modulus\n7. Square root\n8. Factorial\n9. Units Conversion\n10. Log\n11. ln\n12. Exponential Function\n13. Trignometric Functions\n14. Hyperbolic Functions\n15. Exit\n");
+		printf("1. Summution\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power\n6. Modulus\n7. Square root\n8. Factorial\n9. Units Conversion\n10. Log\n11. ln\n12. Exponential Function\n13. Trignometric Functions\n14. Hyperbolic Functions\n15. Constants\n16. Exit\n");
 		scanf_s("%d", &op);
 
 		switch (op) {
 		case 1:
 			green();
 			printf("Summution:\n");
+			reset();
 			Summution(Number_1, Number_2);
 			break;
 		case 2:
 			red();
 			printf("Subtraction:\n");
+			reset();
 			Subtraction(Number_1, Number_2);
 			break;
 		case 3:
 			blue();
 			printf("Multiplication:\n");
+			reset();
 			Multiplication(Number_1, Number_2);
 			break;
 		case 4:
 			magenta();
 			printf("Division:\n");
+			reset();
 			Division(Number_1, Number_2);
 			break;
 		case 5:
 			reset();
 			printf("Power:\n");
+			reset();
 			Power(Number_1, Number_2);
 			break;
 		case 6:
 			green();
 			printf("Modulus:\n");
+			reset();
 			Modulus(Number_3, Number_4);
 			break;
 		case 7:
 			red();
 			printf("Square Root:\n");
+			reset();
 			Square_Root(Number_1);
 			break;
 		case 8:
 			blue();
 			printf("Factorial:\n");
+			reset();
 			Factorial(Number_3);
 			break;
 		case 9: 
@@ -186,6 +203,9 @@ int main() {
 			Hyperbolic(conv, Number_1);
 			break;
 		case 15:
+			Constants(conv);
+			break;
+		case 16:
 			break;
 		default:
 			printf("Please enter a valid operation\n");
@@ -274,7 +294,7 @@ float Square_Root(float Number_1) {
 
 
 	Result = sqrt(Number_1);
-	printf("The Square root of the number is: %.3f\n", Result);
+	printf("%c%.3f = %.3f\n", 251, Number_1, Result);
 	Result = 0;
 }
 
@@ -1008,3 +1028,57 @@ float Hyperbolic(int conv, float Number_1) {
 		}
 	}
 }
+
+void Constants(int conv) {
+	Constants_:
+	while (conv != 12) {
+		red();
+		printf("Please enter the constant you want: \n");
+		magenta();
+		printf("1. PI(%c)\n2. Eular's Number(e)\n3. Golden Ration(%c)\n4. Speed of light in vacuum(c)\n5. Gravity's Acceleration(g)\n6. Magnetic Constant(%c)\n7. Plank's Constant(h)\n8. Electron Mass(me)\n9. Proton Mass(mp)\n10. Avogadro's Number(NA)\n11. Electron Charge\n12. Exit\n",227,232,230);
+		reset();
+		scanf_s("%d", &conv);
+		if (conv == 1) {
+			printf("%c = %f\n", 227, M_PI);
+		}
+		else if (conv == 2) {
+			printf("e = %f\n", exp(1));
+		}
+		else if (conv == 3) {
+			printf("%c = %f\n", 232, M_PHI);
+		}
+		else if (conv == 4) {
+			printf("c = %d m/s\n", M_C);
+		}
+		else if (conv == 5) {
+			printf("g = %d m/s2\n", M_G);
+		}
+		else if (conv == 6) {
+			const double M_MC = 4.0 * M_PI;
+			printf("%c = %fE-7 N/A2\n", 230, M_MC);
+		}
+		else if (conv == 7) {
+			printf("h = %fE-34 J.s\n", M_H);
+		}
+		else if (conv == 8) {
+			printf("me = %fE-31 kg\n", M_ME);
+		}
+		else if (conv == 9) {
+			printf("mp = %fE-27 kg\n", M_MP);
+		}
+		else if (conv == 10) {
+			printf("NA = %fE23 mol-1\n", AVOGADRO);
+		}
+		else if (conv == 11) {
+			printf("e = %fE-19 C\n", M_EC);
+		}
+		else if (conv == 12) {
+			break;
+		}
+		else {
+			printf("Please enter a valid value!!\n");
+			goto Constants_;
+		}
+	}
+}
+
