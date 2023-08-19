@@ -7,7 +7,7 @@
 /**************************************************
 *Creator: Mohamed Galal                           *
 *Program: Simple Calculator		          *
-*Version: V2.4.0                                  *
+*Version: V2.5.0                                  *
 *Last Update: 19/08/2023                          *
 **************************************************/
 
@@ -36,55 +36,94 @@ float Power_2(unsigned short int, float);
 float Temperature(unsigned short int, float);
 float Rad(float);
 float Trig(unsigned short int, unsigned short int, float);
-float Log(float);
+float Log(float, float);
+float LN(float);
 float Exponential(float);
+float Hyperbolic(int, float);
+
+/*Colors Section*/
+void red() {
+	printf("\033[1;31m");
+}
+void green() {
+	printf("\033[1;32m");
+}
+void yellow() {
+	printf("\033[1;33m");
+}
+void blue() {
+	printf("\033[1;34m");
+}
+void magenta() {
+	printf("\033[1;35m");
+}
+void cyan() {
+	printf("\033[1;36m");
+}
+void reset() {
+	printf("\033[0m");
+}
 
 /*Main Function*/
 int main() {
-	while (op !=13) {
+	while (op !=15) {
+		cyan();
 		printf("Please choose the operation you want to perform : \n");
-		printf("1. Summution\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power\n6. Modulus\n7. Square root\n8. Factorial\n9. Units Conversion\n10. Trignometric Functions\n11. Log\n12. Exponential Function\n13. Exit\n");
+		yellow();
+		printf("1. Summution\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power\n6. Modulus\n7. Square root\n8. Factorial\n9. Units Conversion\n10. Log\n11. ln\n12. Exponential Function\n13. Trignometric Functions\n14. Hyperbolic Functions\n15. Exit\n");
 		scanf_s("%d", &op);
 
 		switch (op) {
 		case 1:
+			green();
 			printf("Summution:\n");
 			Summution(Number_1, Number_2);
 			break;
 		case 2:
+			red();
 			printf("Subtraction:\n");
 			Subtraction(Number_1, Number_2);
 			break;
 		case 3:
+			blue();
 			printf("Multiplication:\n");
 			Multiplication(Number_1, Number_2);
 			break;
 		case 4:
+			magenta();
 			printf("Division:\n");
 			Division(Number_1, Number_2);
 			break;
 		case 5:
+			reset();
 			printf("Power:\n");
 			Power(Number_1, Number_2);
 			break;
 		case 6:
+			green();
 			printf("Modulus:\n");
 			Modulus(Number_3, Number_4);
 			break;
 		case 7:
+			red();
 			printf("Square Root:\n");
 			Square_Root(Number_1);
 			break;
 		case 8:
+			blue();
 			printf("Factorial:\n");
 			Factorial(Number_3);
 			break;
 		case 9: 
 			Conversions:
 			while (op_2 !=10) {
+				magenta();
 				printf("Units Conversion:\n");
+				reset();
 				printf("Choose the physical quantity you want to convert: \n");
+				green();
 				printf("1. Length\n2. Area\n3. Volume\n4. Mass\n5. Veloity\n6. Pressure\n7. Energy\n8. Power\n9. Temperature\n10. Exit\n");
+				reset();
 				scanf_s("%d", &op_2);
 				if (op_2 == 1) {
 					Length(conv, Number_1);
@@ -132,15 +171,21 @@ int main() {
 			}
 			break;
 		case 10:
-			Trig(conv, trig_op, Number_1);
+			Log(Number_2 ,Number_1);
 			break;
 		case 11:
-			Log(Number_1);
+			LN(Number_1);
 			break;
 		case 12:
-		Exponential(Number_1);
+			Exponential(Number_1);
 			break;
 		case 13:
+			Trig(conv, trig_op, Number_1);
+			break;
+		case 14:
+			Hyperbolic(conv, Number_1);
+			break;
+		case 15:
 			break;
 		default:
 			printf("Please enter a valid operation\n");
@@ -149,6 +194,7 @@ int main() {
 	}
 	return 0;
 }
+
 /*Functions Section*/
 float Summution(float Number_1, float Number_2) {
 	printf("Please enter the fist number: ");
@@ -545,7 +591,7 @@ float Power_2(unsigned short int conv, float Number_1) {
 
 float Temperature(unsigned short int conv, float Number_1) {
 	float Result;
-	printf("Energy:\n");
+	printf("Temperature:\n");
 	printf("Choose the unit you want to convert from: \n");
 	printf("1. F>C\n2. C>F\n3. K>C\n4. C>K\n5. R>C\n6. C>R\n");
 	scanf_s("%d", &conv);
@@ -608,7 +654,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				printf("Please enter the radian value: ");
 				scanf_s("%f", &Number_1);
 				Result = sin(Number_1);
-				printf("Sin(%f) = %f\n", Number_1, Result);
+				printf("sin(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
@@ -616,7 +662,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = sin(Number_1);
-				printf("Sin(%f) = %f\n", Degree, Result);
+				printf("sin(%f) = %f\n", Degree, Result);
 			}
 			else {
 				printf("Please enter a valid value!!\n");
@@ -630,7 +676,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				printf("Please enter the radian value: ");
 				scanf_s("%f", &Number_1);
 				Result = cos(Number_1);
-				printf("Cos(%f) = %f\n", Number_1, Result);
+				printf("cos(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
@@ -638,7 +684,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = cos(Number_1);
-				printf("Cos(%f) = %f\n", Degree, Result);
+				printf("cos(%f) = %f\n", Degree, Result);
 			}
 			else {
 				printf("Please enter a valid value!!\n");
@@ -652,7 +698,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				printf("Please enter the radian value: ");
 				scanf_s("%f", &Number_1);
 				Result = tan(Number_1);
-				printf("Tan(%f) = %f\n", Number_1, Result);
+				printf("tan(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
@@ -660,7 +706,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = tan(Number_1);
-				printf("Tan(%f) = %f\n", Degree, Result);
+				printf("tan(%f) = %f\n", Degree, Result);
 			}
 			else {
 				printf("Please enter a valid value!!\n");
@@ -674,7 +720,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				printf("Please enter the radian value: ");
 				scanf_s("%f", &Number_1);
 				Result = 1.0 / tan(Number_1);
-				printf("Cot(%f) = %f\n", Number_1, Result);
+				printf("cot(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
@@ -682,7 +728,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = 1.0 / tan(Number_1);
-				printf("Cot(%f) = %f\n", Degree, Result);
+				printf("cot(%f) = %f\n", Degree, Result);
 			}
 			else {
 				printf("Please enter a valid value!!\n");
@@ -696,7 +742,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				printf("Please enter the radian value: ");
 				scanf_s("%f", &Number_1);
 				Result = 1.0 / cos(Number_1);
-				printf("Sec(%f) = %f\n", Number_1, Result);
+				printf("sec(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
@@ -704,7 +750,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = 1.0 / cos(Number_1);
-				printf("Sec(%f) = %f\n", Degree, Result);
+				printf("sec(%f) = %f\n", Degree, Result);
 			}
 			else {
 				printf("Please enter a valid value!!\n");
@@ -718,7 +764,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				printf("Please enter the radian value: ");
 				scanf_s("%f", &Number_1);
 				Result = 1.0 / sin(Number_1);
-				printf("Cosec(%f) = %f\n", Number_1, Result);
+				printf("csc(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
@@ -726,7 +772,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = 1.0 / sin(Number_1);
-				printf("Cosec(%f) = %f\n", Degree, Result);
+				printf("csc(%f) = %f\n", Degree, Result);
 			}
 			else {
 				printf("Please enter a valid value!!\n");
@@ -744,7 +790,12 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				}
 				else {
 					Result = asin(Number_1) / M_PI;
-					printf("arcsin(%f) = %fPI\n", Number_1, Result);
+					if (Result == 0) {
+						printf("asin(%f) = %f\n", Number_1, Result);
+					}
+					else {
+						printf("asin(%f) = %f%c\n", Number_1, Result, 227);
+					}
 				}
 			}
 			else if (trig_op == 2) {
@@ -756,7 +807,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				else {
 					Degree = Number_1;
 					Result = 180.0 * asin(Number_1) / M_PI;
-					printf("arcsin(%f) = %f\n", Degree, Result);
+					printf("asin(%f) = %f\n", Degree, Result);
 				}
 			}
 			else {
@@ -775,7 +826,12 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				}
 				else {
 					Result = acos(Number_1) / M_PI;
-					printf("arccos(%f) = %fPI\n", Number_1, Result);
+					if (Result == 0) {
+						printf("acos(%f) = %f\n", Number_1, Result);
+					}
+					else {
+						printf("acos(%f) = %f%c\n", Number_1, Result, 227);
+					}
 				}
 			}
 			else if (trig_op == 2) {
@@ -787,7 +843,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				else {
 					Degree = Number_1;
 					Result = 180.0 * acos(Number_1) / M_PI;
-					printf("arccos(%f) = %f\n", Degree, Result);
+					printf("acos(%f) = %f\n", Degree, Result);
 				}
 			}
 			else {
@@ -803,14 +859,20 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 				printf("Please enter the value: ");
 				scanf_s("%f", &Number_1);
 				Result = atan(Number_1) / M_PI;
-				printf("arctan(%f) = %fPI\n", Number_1, Result);
+				if (Result == 0) {
+					printf("atan(%f) = %f\n", Number_1, Result);
+				}
+				else {
+					printf("atan(%f) = %f%c\n", Number_1, Result, 227);
+				}
+				
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the value: ");
 				scanf_s("%f", &Number_1);
 				Degree = Number_1;
 				Result = 180.0 * atan(Number_1) / M_PI;
-				printf("arctan(%f) = %f\n", Degree, Result);
+				printf("atan(%f) = %f\n", Degree, Result);
 			}
 			else {
 				printf("Please enter a valid value!!\n");
@@ -819,20 +881,44 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 	}
 }
 
-float Log(float Number_1) {
-	Logarithm:
+float Log(float Number_2, float Number_1) {
 	float Result;
+	Logarithm:
+	printf("Please enter the base value: ");
+	scanf_s("%f", &Number_2);
+	if (Number_2 <= 0) {
+		printf("Please enter a positive value!!\n");
+		goto Logarithm;
+	}
+	else {
+		printf("Please enter the value: ");
+		scanf_s("%f", &Number_1);
+		if (Number_1 <= 0) {
+			printf("Please enter a valid value!!\n");
+			goto Logarithm;
+		}
+		else {
+			Result = log10(Number_1) / log10(Number_2);
+			printf("Log%f(%f) = %f \n", Number_2, Number_1, Result);
+		}
+	}
+	
+}
+
+float LN(float Number_1) {
+	float Result;
+	LN_:
+
 	printf("Please enter the value: ");
 	scanf_s("%f", &Number_1);
 	if (Number_1 <= 0) {
 		printf("Please enter a valid value!!\n");
-		goto Logarithm;
+		goto LN_;
 	}
 	else {
-		Result = log10(Number_1);
-		printf("Log10(%f) = %f \n", Number_1, Result);
+		Result = log10(Number_1) / log10(exp(1));
+		printf("ln(%f) = %f \n",Number_1, Result);
 	}
-	
 }
 
 float Exponential(float Number_1) {
@@ -842,3 +928,83 @@ float Exponential(float Number_1) {
 	Result = exp(Number_1);
 	printf("e^%f = %f \n", Number_1, Result);
  }
+
+float Hyperbolic(int conv, float Number_1) {
+	float Result;
+	Hyperbolic:
+	while (conv != 10) {
+		red();
+		printf("Please enter the trignometric function you want: \n");
+		magenta();
+		printf("1. sinh\n2. cosh\n3. tanh\n4. coth\n5. sech\n6. csch\n7. arcsinh\n8. arccosh\n9. arctanh\n10. Exit\n");
+		reset();
+		scanf_s("%d", &conv);
+		if (conv == 1) {
+			printf("Please enter the value: ");
+			scanf_s("%f", &Number_1);
+			Result = sinh(Number_1);
+			printf("sinh(%f) = %f\n", Number_1, Result);
+		}
+		else if (conv == 2) {
+			printf("Please enter the value: ");
+			scanf_s("%f", &Number_1);
+			Result = cosh(Number_1);
+			printf("cosh(%f) = %f\n", Number_1, Result);
+		}
+		else if (conv == 3) {
+			printf("Please enter the value: ");
+			scanf_s("%f", &Number_1);
+			Result = tanh(Number_1);
+			printf("tanh(%f) = %f\n", Number_1, Result);
+		}
+		else if (conv == 4) {
+			printf("Please enter the value: ");
+			scanf_s("%f", &Number_1);
+			Result = 1 / tanh(Number_1);
+			printf("tanh(%f) = %f\n", Number_1, Result);
+		}
+		else if (conv == 5) {
+			printf("Please enter the value: ");
+			scanf_s("%f", &Number_1);
+			Result = 1 / cosh(Number_1);
+			printf("sech(%f) = %f\n", Number_1, Result);
+		}
+		else if (conv == 6) {
+			printf("Please enter the value: ");
+			scanf_s("%f", &Number_1);
+			Result = 1 / sinh(Number_1);
+			printf("csch(%f) = %f\n", Number_1, Result);
+		}
+		else if (conv == 7) {
+			printf("Please enter the value: ");
+			scanf_s("%f", &Number_1);
+			Result = asinh(Number_1);
+			printf("asinh(%f) = %f\n", Number_1, Result);
+		}
+		else if (conv == 8) {
+			printf("Please enter the value: ");
+			scanf_s("%f", &Number_1);
+			Result = acosh(Number_1);
+			printf("acosh(%f) = %f\n", Number_1, Result);
+		}
+		else if (conv == 9) {
+			printf("Please enter the value: ");
+			scanf_s("%f", &Number_1);
+			if(Number_1 <-1 || Number_1 >1) {
+				printf("Please enter a valid value!!\n");
+				goto Hyperbolic;
+			}
+			else {
+				Result = atanh(Number_1);
+				printf("atanh(%f) = %f\n", Number_1, Result);
+			}
+		}
+		else if (conv == 10) {
+			break;
+		}
+		else {
+			printf("Please enter a valid value!!\n");
+			goto Hyperbolic;
+		}
+	}
+}
