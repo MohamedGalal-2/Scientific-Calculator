@@ -14,7 +14,7 @@
 
 /**************************************************
 *Creator: Mohamed Galal                           *
-*Program: Simple Calculator		          *
+*Program: Scientific Calculator			          *
 *Version: V2.6.0                                  *
 *Last Update: 19/08/2023                          *
 **************************************************/
