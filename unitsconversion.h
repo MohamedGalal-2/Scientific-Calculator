@@ -1,0 +1,9 @@
+float Length(unsigned short int, float);
+float Area(unsigned short int, float);
+float Volume(unsigned short int, float);
+float Mass(unsigned short int, float);
+float Velocity(unsigned short int, float);
+float Pressure(unsigned short int, float);
+float Energy(unsigned short int, float);
+float Power_2(unsigned short int, float);
+float Temperature(unsigned short int, float);
