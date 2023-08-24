@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include "mainoperations.h"
 
@@ -100,5 +101,5 @@ Fact:
 		}
 	}
 
-	printf("The Factorial of the number is: %d\n", Result_2);
+	printf("The Factorial of the number %d = %d\n",Number_3 ,Result_2);
 }

@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 #include "trigfunctions.h"
 #define M_PI 3.14159265358979323846
 
@@ -8,10 +11,13 @@ float Rad(float Degree) {
 }
 
 float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) {
-	float Result, Degree, Radian;
+	float Result, Degree;
 	while (conv != 10) {
+		cyan();
 		printf("Please enter the trignometric function you want: \n");
+		green();
 		printf("1. sin\n2. cos\n3. tan\n4. cot\n5. sec\n6. cosec\n7. arcsin\n8. arccos\n9. arctan\n10. Exit\n");
+		reset();
 		scanf_s("%d", &conv);
 		if (conv == 1) {
 			printf("Choose Rad for radians or Deg for degrees: \n");
