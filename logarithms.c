@@ -1,10 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+/*Inlcudes Section*/
+#include "logarithms.h"
 
+/*Functions Definition Section*/
 float Log(float Number_2, float Number_1) {
 	float Result;
-	Logarithm:
+Logarithm:
 	printf("Please enter the base value: ");
 	scanf_s("%f", &Number_2);
 	if (Number_2 <= 0) {

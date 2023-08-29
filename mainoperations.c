@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+/*Inlcudes Section*/
 #include "mainoperations.h"
 
+/*Functions Definition Section*/
 float Summution(int op, float Number_1) {
 	float Result = 0;
 	printf("Please enter how many numbers you want to sum: \n");
@@ -101,5 +100,5 @@ Fact:
 		}
 	}
 
-	printf("The Factorial of the number %d = %d\n",Number_3 ,Result_2);
+	printf("The Factorial of the number %d = %d\n", Number_3, Result_2);
 }

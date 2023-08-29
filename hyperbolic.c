@@ -1,10 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+/*Includes Section*/
 #include "hyperbolic.h"
 #include "trigfunctions.h"
-#define M_PI 3.14159265358979323846
 
+/*Functions Definition Section*/
 float Hyperbolic(int conv, float Number_1) {
 	float Result;
 Hyperbolic:

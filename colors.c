@@ -1,3 +1,7 @@
+/*Includes Section*/
+#include "colors.h"
+
+/*Functions Definition Section*/
 void red() {
 	printf("\033[1;31m");
 }

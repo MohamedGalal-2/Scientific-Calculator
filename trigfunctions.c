@@ -1,10 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+/*Inlcudes Section*/
 #include "trigfunctions.h"
-#define M_PI 3.14159265358979323846
 
-
+/*Functions Definition Section*/
 float Rad(float Degree) {
 	float Radian;
 	return Radian = Degree * (M_PI / 180.0);
