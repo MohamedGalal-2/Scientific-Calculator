@@ -4,7 +4,7 @@
 #include <math.h>
 
 /*Macros Definition Section*/
-#define M_PI 3.14159265358979323846
+#define M_PI (3.14159265358979323846)
 
 /*Function Decleration Section*/
 float Rad(float);
