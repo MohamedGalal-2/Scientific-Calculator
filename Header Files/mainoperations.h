@@ -1,6 +1,9 @@
+/*File Guard*/
+#ifndef _MAINOPERATIONS_H_
+#define _MAINOPERATIONS_H_
+
 /*Includes Section*/
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
 
 /*Functions Decleration Section*/
@@ -12,3 +15,4 @@ float Power(float, float);
 int Modulus(int, int);
 float Square_Root(float);
 int Factorial(int);
+#endif

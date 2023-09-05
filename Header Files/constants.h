@@ -1,6 +1,9 @@
+/*File Guard*/
+#ifndef _CONSTANTS_H_
+#define _CONSTANTS_H_
+
 /*Includes Section*/
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
 
 /* Macros Definition Section*/
@@ -16,4 +19,4 @@
 
 /*Functions Decleration Section*/
 void Constants(int);
-
+#endif

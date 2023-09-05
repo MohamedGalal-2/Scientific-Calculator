@@ -1,3 +1,7 @@
+/*File Guard*/
+#ifndef _UNITCONVERTER_H_
+#define _UNITCONVERTER_H_
+
 /*Includes Section*/
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,3 +28,4 @@ float Pressure(unsigned short int, float);
 float Energy(unsigned short int, float);
 float Power_2(unsigned short int, float);
 float Temperature(unsigned short int, float);
+#endif
