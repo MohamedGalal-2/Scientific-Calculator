@@ -11,8 +11,8 @@
 #include "constants.h"
 
 /**************************************************
-*Creator: Mohamed Galal                           *
-*Program: Scientific Calculator			  *
+*Author: Mohamed Galal                            *
+*Program: Scientific Calculator			          *
 *Version: V2.6.0                                  *
 *Last Update: 19/08/2023                          *
 **************************************************/
