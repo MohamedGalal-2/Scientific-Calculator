@@ -1,6 +1,6 @@
 /*Includes Section*/
-#include "hyperbolic.h"
-#include "trigfunctions.h"
+#include "..\Header Files/hyperbolic.h"
+#include "..\Header Files/trigfunctions.h"
 
 /*Functions Definition Section*/
 float Hyperbolic(int conv, float Number_1) {

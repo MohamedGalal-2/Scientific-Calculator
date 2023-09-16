@@ -1,5 +1,5 @@
 /*Inlcudes Section*/
-#include "trigfunctions.h"
+#include "..\Header Files/trigfunctions.h"
 
 /*Functions Definition Section*/
 float Rad(float Degree) {

@@ -2,13 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "colors.h"
-#include "mainoperations.h"
-#include "unitsconversion.h"
-#include "logarithms.h"
-#include "trigfunctions.h"
-#include "hyperbolic.h"
-#include "constants.h"
+#include "..\Header Files/colors.h"
+#include "..\Header Files/mainoperations.h"
+#include "..\Header Files/unitsconversion.h"
+#include "..\Header Files/logarithms.h"
+#include "..\Header Files/trigfunctions.h"
+#include "..\Header Files/hyperbolic.h"
+#include "..\Header Files/constants.h"
 
 /**************************************************
 *Author: Mohamed Galal                            *
@@ -24,7 +24,7 @@ unsigned short int conv, op_2, op, trig_op;
 
 /*Main Function*/
 int main() {
-	while (op !=16) {
+	while (op != 16) {
 		cyan();
 		printf("Please choose the operation you want to perform : \n");
 		yellow();
@@ -81,9 +81,9 @@ int main() {
 			reset();
 			Factorial(Number_3);
 			break;
-		case 9: 
-			Conversions:
-			while (op_2 !=10) {
+		case 9:
+		Conversions:
+			while (op_2 != 10) {
 				magenta();
 				printf("Units Conversion:\n");
 				reset();
@@ -138,7 +138,7 @@ int main() {
 			}
 			break;
 		case 10:
-			Log(Number_2 ,Number_1);
+			Log(Number_2, Number_1);
 			break;
 		case 11:
 			LN(Number_1);
