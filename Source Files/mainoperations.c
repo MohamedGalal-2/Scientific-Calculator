@@ -85,20 +85,10 @@ float Square_Root(float Number_1) {
 }
 
 int Factorial(int Number_3) {
-	int Result_2 = 1;
-Fact:
-	printf("Please enter the number: ");
-	scanf_s("%d", &Number_3);
-
-	if (Number_3 < 1) {
-		printf("Please enter a positive number!!\n");
-		goto Fact;
+	if (0 == Number_3) {
+		return 1;
 	}
 	else {
-		for (int i = 1; i <= Number_3; i++) {
-			Result_2 *= i;
-		}
+		return Number_3 * Factorial(Number_3 - 1);
 	}
-
-	printf("The Factorial of the number %d = %d\n", Number_3, Result_2);
 }

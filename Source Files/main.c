@@ -22,6 +22,7 @@ float Number_1, Number_2;
 int Number_3, Number_4;
 unsigned short int conv, op_2, op, trig_op;
 
+
 /*Main Function*/
 int main() {
 	while (op != 16) {
@@ -79,8 +80,19 @@ int main() {
 			blue();
 			printf("Factorial:\n");
 			reset();
-			Factorial(Number_3);
-			break;
+			Fact:
+			printf("Please enter the number: ");
+			scanf_s("%d", &Number_3);
+			if (Number_3 < 0) {
+				red();
+				printf("Please enter a positive number!!\n");
+				reset();
+				goto Fact;
+			}
+			else {
+				printf("The Factorial of the number %d = %d\n", Number_3, Factorial(Number_3));
+				break;
+			}
 		case 9:
 		Conversions:
 			while (op_2 != 10) {
