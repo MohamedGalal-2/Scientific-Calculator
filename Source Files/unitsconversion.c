@@ -1,12 +1,16 @@
 /*Includes Section*/
 #include "..\Header Files\unitsconversion.h"
 
-/*Function Definition Section*/
+char *(LengthConversions)[8] = { "1. In>cm", "2. cm>In", "3. ft>m", "4. m>ft", "5. yd>m", "6. m>yd", "7. mile>km", "8. km>mile" };
+
+/*Functions Definition Section*/
 float Length(unsigned short int conv, float Number_1) {
 	float Result;
 	printf("Length:\n");
-	printf("Choose the unit you want to convert from: \n");
-	printf("1. In>cm\n2. cm>In\n3. ft>m\n4. m>ft\n5. yd>m\n6. m>yd\n7. mile>km\n8. km>mile\n");
+	printf("Choose the conversion you want to perform: \n");
+	for(int i = 0; i < 8; i++) {
+		printf("%s\n", LengthConversions[i]);
+	}
 	scanf_s("%d", &conv);
 	if (conv == 1) {
 		printf("Please enter the quantity: ");

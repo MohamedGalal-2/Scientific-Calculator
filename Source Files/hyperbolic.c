@@ -3,7 +3,7 @@
 
 /*Functions Definition Section*/
 float Hyperbolic(int conv, float Number_1) {
-	float Result;
+float Result;
 Hyperbolic:
 	while (conv != 10) {
 		red();

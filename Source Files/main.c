@@ -14,7 +14,7 @@ int main() {
 		cyan();
 		printf("Please choose the operation you want to perform : \n");
 		yellow();
-		for (int i = 0; i < 15; i++) {
+		for (int i = 0; i < 16; i++) {
 			printf("%s\n", Operations[i]);
 		}
 		reset();

@@ -1,8 +1,10 @@
 /*Inlcudes Section*/
 #include "..\Header Files\trigfunctions.h"
 
+/*Global Variables Section*/
 char* (TrigFunctions)[10] = { "1. sin", "2. cos", "3. tan", "4. cot", "5. sec", "6. cosec", "7. arcsin", "8. arccos", "9. arctan", "10. Exit" };
 
+/*Functions Definition Section*/
 float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) {
 	float Result, Degree;
 	while (conv != 10) {
