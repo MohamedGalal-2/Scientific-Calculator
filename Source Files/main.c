@@ -66,7 +66,7 @@ int main() {
 			blue();
 			printf("Factorial:\n");
 			reset();
-			Fact:
+		Fact:
 			printf("Please enter the number: ");
 			scanf_s("%d", &Number_3);
 			if (Number_3 < 0) {
@@ -76,7 +76,7 @@ int main() {
 				goto Fact;
 			}
 			else {
-				printf("The Factorial of the number %d = %d\n", Number_3, Factorial(Number_3));
+				printf("%d! = %d\n", Number_3, Factorial(Number_3));
 				break;
 			}
 		case 9:
