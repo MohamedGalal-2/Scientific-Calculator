@@ -1,6 +1,7 @@
 /*Includes Section*/
 #include "..\Header Files\unitsconversion.h"
 
+/*Global Variables Section*/
 char *(LengthConversions)[8] = { "1. In>cm", "2. cm>In", "3. ft>m", "4. m>ft", "5. yd>m", "6. m>yd", "7. mile>km", "8. km>mile" };
 
 /*Functions Definition Section*/
