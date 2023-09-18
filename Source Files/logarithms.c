@@ -1,5 +1,5 @@
 /*Inlcudes Section*/
-#include "..\Header Files/logarithms.h"
+#include "..\Header Files\logarithms.h"
 
 /*Functions Definition Section*/
 float Log(float Number_2, float Number_1) {

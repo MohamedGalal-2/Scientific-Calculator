@@ -1,11 +1,16 @@
+/*File Guard*/
+#ifndef _TRIGFUNCTIONS_H_
+#define _TRIGFUNCTIONS_H_
+
 /*Includes Section*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-/*Macros Definition Section*/
-#define M_PI (3.14159265358979323846) /*PI Value*/
+#include "..\Header Files\DegreetoRad.h"
 
 /*Function Decleration Section*/
-float Rad(float);
 float Trig(unsigned short int, unsigned short int, float);
+
+/*Global Variables Section*/
+
+#endif

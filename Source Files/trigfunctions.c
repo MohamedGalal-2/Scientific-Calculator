@@ -1,11 +1,7 @@
 /*Inlcudes Section*/
-#include "..\Header Files/trigfunctions.h"
+#include "..\Header Files\trigfunctions.h"
 
-/*Functions Definition Section*/
-float Rad(float Degree) {
-	float Radian;
-	return Radian = Degree * (M_PI / 180.0);
-}
+char* (TrigFunctions)[10] = { "1. sin", "2. cos", "3. tan", "4. cot", "5. sec", "6. cosec", "7. arcsin", "8. arccos", "9. arctan", "10. Exit" };
 
 float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) {
 	float Result, Degree;
@@ -13,7 +9,9 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 		cyan();
 		printf("Please enter the trignometric function you want: \n");
 		green();
-		printf("1. sin\n2. cos\n3. tan\n4. cot\n5. sec\n6. cosec\n7. arcsin\n8. arccos\n9. arctan\n10. Exit\n");
+		for (int i = 0; i < 10; i++) {
+			printf("%s\n", TrigFunctions[i]);
+		}
 		reset();
 		scanf_s("%d", &conv);
 		if (conv == 1) {

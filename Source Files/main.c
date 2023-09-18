@@ -1,27 +1,12 @@
 /*Include Section*/
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include "..\Header Files/colors.h"
-#include "..\Header Files/mainoperations.h"
-#include "..\Header Files/unitsconversion.h"
-#include "..\Header Files/logarithms.h"
-#include "..\Header Files/trigfunctions.h"
-#include "..\Header Files/hyperbolic.h"
-#include "..\Header Files/constants.h"
+#include "..\Header Files\main.h"
 
 /**************************************************
 *Author: Mohamed Galal                            *
 *Program: Scientific Calculator			          *
 *Version: V2.6.0                                  *
-*Last Update: 19/08/2023                          *
+*Last Update: 19/09/2023                          *
 **************************************************/
-
-/*Global Variables Section*/
-float Number_1, Number_2;
-int Number_3, Number_4;
-unsigned short int conv, op_2, op, trig_op;
-
 
 /*Main Function*/
 int main() {
@@ -29,10 +14,11 @@ int main() {
 		cyan();
 		printf("Please choose the operation you want to perform : \n");
 		yellow();
-		printf("1. Summution\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power\n6. Modulus\n7. Square root\n8. Factorial\n9. Units Conversion\n10. Log\n11. ln\n12. Exponential Function\n13. Trignometric Functions\n14. Hyperbolic Functions\n15. Constants\n16. Exit\n");
+		for (int i = 0; i < 15; i++) {
+			printf("%s\n", Operations[i]);
+		}
 		reset();
 		scanf_s("%d", &op);
-
 		switch (op) {
 		case 1:
 			green();
@@ -101,7 +87,9 @@ int main() {
 				reset();
 				printf("Choose the physical quantity you want to convert: \n");
 				green();
-				printf("1. Length\n2. Area\n3. Volume\n4. Mass\n5. Veloity\n6. Pressure\n7. Energy\n8. Power\n9. Temperature\n10. Exit\n");
+				for (int i = 0; i < 10; i++) {
+					printf("%s\n", Units[i]);
+				}
 				reset();
 				scanf_s("%d", &op_2);
 				if (op_2 == 1) {
