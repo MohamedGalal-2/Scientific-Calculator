@@ -27,7 +27,7 @@ Make sure you have the following installed before running the application:
 ### Installation
 Clone the repository to your local machine using the following command:
 
-git clone https://github.com/MohamedGalal-2/Scientific_Calculator.git
+    git clone https://github.com/MohamedGalal-2/Scientific_Calculator.git
 
 ### Usage
 Once you have met these requirements, you can run the Scientific Calculator .exe CLI file by following these steps:
