@@ -42,4 +42,4 @@ The Calculator will open in the terminal, allowing you to perform various calcul
 Contributions are welcome! If you find any bugs or want to add new features, please feel free to open an issue or submit a pull request.
 
 ### License
-This project is licensed under the MIT License.
+This project contains my own code for a simple ccientific calculator. Feel free to use for any purpose.
