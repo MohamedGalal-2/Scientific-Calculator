@@ -33,7 +33,7 @@ git clone https://github.com/MohamedGalal-2/Scientific_Calculator.git
 Once you have met these requirements, you can run the Scientific Calculator .exe CLI file by following these steps:
 
 * Navigate to the directory where the .exe file is located using the cd command.
-* Type the name of the .exe file (including the extension) and press Enter to execute it.
+* Type the name of the .exe file (including the extension) and press Enter to execute it (you will find it in the Versions Folder).
 * The command line program will run, and you can interact with it using the provided command-line interface.
 
 The Calculator will open in the terminal, allowing you to perform various calculations.
