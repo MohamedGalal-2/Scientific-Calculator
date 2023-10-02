@@ -1,11 +1,45 @@
-<div align='center'>
+# Scientific Calculator
+This repository contains a Scientific Calculator built using C.
 
-<h1>Simple Scientific calculator</h1>
-<p>A simple scientific calculator that can do simple mathematical calculations like summation , subtraction , multiplication and division. It can also do operations like powering, square rooting, modulus and units conversation. It can also compute logarithmic functions and exponential functions. It can also compute trigonometric functions and hyperbolic functions. And finally there are some mathematical and physical constants saved on it.</p>
+## Table of Contents
+* Features
+* Prerequisites
+* Installation
+* Usage
+* Contributing
+* License
 
-<h4> <span> · </span> <a href="https://github.com/MohamedGalal-2/Scientific_Calculator/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/MohamedGalal-2/Scientific_Calculator/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/MohamedGalal-2/Scientific_Calculator/issues"> Request Feature </a> </h4>
+### Features
+* Basic arithmetic operations: Addition, subtraction, multiplication, and division.
+* Trigonometric functions: sine, cosine, tangent, etc.
+* Inverse of Trignometric functions: arcsin, arccos, arctan.
+* Hyperbolic functions: sinh, cosh, tanh, etc.
+* Inverse of Hyperbolic functions: arcsinh, arccosh, arctanh.
+* Exponential and logarithmic functions.
+* Factorial calculations.
+* Root calculations.
 
+### Prerequisites
+Make sure you have the following installed before running the application:
 
-</div>
+* C runtime environment installed on your system such as GCC (GNU Compiler Collection) or Microsoft Visual C++, or any other C development environment based on your operating system.
 
-## :star2: About the Project
+### Installation
+Clone the repository to your local machine using the following command:
+
+git clone https://github.com/MohamedGalal-2/Scientific_Calculator.git
+
+### Usage
+Once you have met these requirements, you can run the Scientific Calculator .exe CLI file by following these steps:
+
+* Navigate to the directory where the .exe file is located using the cd command.
+* Type the name of the .exe file (including the extension) and press Enter to execute it.
+* The command line program will run, and you can interact with it using the provided command-line interface.
+
+The Calculator will open in the terminal, allowing you to perform various calculations.
+
+### Contributing
+Contributions are welcome! If you find any bugs or want to add new features, please feel free to open an issue or submit a pull request.
+
+### License
+This project is licensed under the MIT License.
