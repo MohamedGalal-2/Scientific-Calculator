@@ -2,12 +2,13 @@
 This repository contains a Scientific Calculator built using C.
 
 ## Table of Contents
-* Features
-* Prerequisites
-* Installation
-* Usage
-* Contributing
-* License
+- [Features](#Features)
+- [Prerequisites](#Prerequisites)
+- [Installation](#Installation)
+- [Contributing](#Contributing)
+- [Usage](#Usage)
+- [Contributing](#Contributing)
+- [License](#License)
 
 ### Features
 * Basic arithmetic operations: Addition, subtraction, multiplication, and division.
