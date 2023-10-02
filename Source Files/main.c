@@ -8,6 +8,8 @@
 *Last Update: 19/09/2023                          *
 **************************************************/
 
+float operations(float num, ...);
+
 /*Main Function*/
 int main() {
 	while (op != 16) {
@@ -24,6 +26,36 @@ int main() {
 			green();
 			printf("Summution:\n");
 			reset();
+			/*int i = 0;
+			long float Numbers[200] = { 0.0 };
+			long float Result[200] = 0.0;
+			char operands[200] = { 0 };
+			while (operands[i - 1] != '#')
+			{
+				scanf("%f", &Numbers[i]);
+				scanf("%c", &operands[i]);
+				i++;
+			}
+			for (int j = 0; j < i; j++)
+			{
+				if (operands[j] == '*')
+				{
+					Result[j] = (Numbers[j - 1] * Numbers[j + 1]);
+				}
+				else if (operands[j] == '/')
+				{
+					Result[j] = (Numbers[j - 1] / Numbers[j + 1]);
+				}
+				else if (operands[j] == '+')
+				{
+					Result[j] = (Numbers[j - 1] + Numbers[j + 1]);
+				}
+				else if (operands[j] == '-')
+				{
+					Result[j] = (Numbers[j - 1] - Numbers[j + 1]);
+				}
+
+			}*/
 			Summution(op, Number_1);
 			break;
 		case 2:
