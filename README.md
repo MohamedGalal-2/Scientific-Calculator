@@ -5,8 +5,8 @@ This repository contains a Scientific Calculator built using C.
 - [Features](#Features)
 - [Prerequisites](#Prerequisites)
 - [Installation](#Installation)
-- [Contributing](#Contributing)
 - [Usage](#Usage)
+- [Contributing](#Contributing)
 - [Contributing](#Contributing)
 - [License](#License)
 
