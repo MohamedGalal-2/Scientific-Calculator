@@ -9,6 +9,8 @@ This repository contains a Scientific Calculator built using C.
 - [Contributing](#Contributing)
 - [License](#License)
 
+![Header image](https://github.com/MohamedGalal-2/Scientific_Calculator/blob/main/Old%20Files/Header.jpg?raw=true)
+
 ### Features
 * Basic arithmetic operations: Addition, subtraction, multiplication, and division.
 * Trigonometric functions: sine, cosine, tangent, etc.
