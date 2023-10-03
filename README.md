@@ -1,8 +1,8 @@
 # Scientific Calculator
 
-![Header image](https://github.com/MohamedGalal-2/Scientific_Calculator/blob/main/Old%20Files/Header.jpg?raw=true)
-
 This repository contains a Scientific Calculator built using C.
+
+![Header image](https://github.com/MohamedGalal-2/Scientific_Calculator/blob/main/Old%20Files/Header.jpg?raw=true)
 
 ## Table of Contents
 - [Features](#Features)
