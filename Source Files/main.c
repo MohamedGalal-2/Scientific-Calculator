@@ -2,11 +2,11 @@
 #include "..\Header Files\main.h"
 
 /**************************************************
-*Author: Mohamed Galal                            *
-*Program: Scientific Calculator			          *
-*Version: V2.6.0                                  *
-*Last Update: 19/09/2023                          *
-**************************************************/
+* @Author   - Mohamed Galal                       *
+* @Program  - Scientific Calculator			      *
+* @Version  - V2.6.0                              *
+* @Updated  - 19/09/2023                          *
+***************************************************/
 
 float operations(float num, ...);
 
