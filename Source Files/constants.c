@@ -10,7 +10,7 @@ Constants_:
 		magenta();
 		printf("1. PI(%c)\n2. Eular's Number(e)\n3. Golden Ration(%c)\n4. Speed of light in vacuum(c)\n5. Gravity's Acceleration(g)\n6. Magnetic Constant(%c)\n7. Plank's Constant(h)\n8. Electron Mass(me)\n9. Proton Mass(mp)\n10. Avogadro's Number(NA)\n11. Electron Charge\n12. Exit\n", 227, 232, 230);
 		reset();
-		scanf_s("%d", &conv);
+		scanf("%d", &conv);
 		if (conv == 1) {
 			printf("%c = %f\n", 227, M_PI);
 		}

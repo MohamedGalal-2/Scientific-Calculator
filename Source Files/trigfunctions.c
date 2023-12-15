@@ -15,20 +15,20 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 			printf("%s\n", TrigFunctions[i]);
 		}
 		reset();
-		scanf_s("%d", &conv);
+		scanf("%d", &conv);
 		if (conv == 1) {
 			printf("Choose Rad for radians or Deg for degrees: \n");
 			printf("1. Rad\n2. Deg\n");
-			scanf_s("%d", &trig_op);
+			scanf("%d", &trig_op);
 			if (trig_op == 1) {
 				printf("Please enter the radian value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Result = sin(Number_1);
 				printf("sin(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = sin(Number_1);
@@ -41,16 +41,16 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 		else if (conv == 2) {
 			printf("Choose Rad for radians or Deg for degrees: \n");
 			printf("1. Rad\n2. Deg\n");
-			scanf_s("%d", &trig_op);
+			scanf("%d", &trig_op);
 			if (trig_op == 1) {
 				printf("Please enter the radian value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Result = cos(Number_1);
 				printf("cos(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = cos(Number_1);
@@ -63,16 +63,16 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 		else if (conv == 3) {
 			printf("Choose Rad for radians or Deg for degrees: \n");
 			printf("1. Rad\n2. Deg\n");
-			scanf_s("%d", &trig_op);
+			scanf("%d", &trig_op);
 			if (trig_op == 1) {
 				printf("Please enter the radian value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Result = tan(Number_1);
 				printf("tan(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = tan(Number_1);
@@ -85,16 +85,16 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 		else if (conv == 4) {
 			printf("Choose Rad for radians or Deg for degrees: \n");
 			printf("1. Rad\n2. Deg\n");
-			scanf_s("%d", &trig_op);
+			scanf("%d", &trig_op);
 			if (trig_op == 1) {
 				printf("Please enter the radian value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Result = 1.0 / tan(Number_1);
 				printf("cot(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = 1.0 / tan(Number_1);
@@ -107,16 +107,16 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 		else if (conv == 5) {
 			printf("Choose Rad for radians or Deg for degrees: \n");
 			printf("1. Rad\n2. Deg\n");
-			scanf_s("%d", &trig_op);
+			scanf("%d", &trig_op);
 			if (trig_op == 1) {
 				printf("Please enter the radian value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Result = 1.0 / cos(Number_1);
 				printf("sec(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = 1.0 / cos(Number_1);
@@ -129,16 +129,16 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 		else if (conv == 6) {
 			printf("Choose Rad for radians or Deg for degrees: \n");
 			printf("1. Rad\n2. Deg\n");
-			scanf_s("%d", &trig_op);
+			scanf("%d", &trig_op);
 			if (trig_op == 1) {
 				printf("Please enter the radian value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Result = 1.0 / sin(Number_1);
 				printf("csc(%f) = %f\n", Number_1, Result);
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the degree: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Degree = Number_1;
 				Number_1 = Rad(Number_1);
 				Result = 1.0 / sin(Number_1);
@@ -151,10 +151,10 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 		else if (conv == 7) {
 			printf("Choose Rad to get radians or Deg to get degrees: \n");
 			printf("1. Rad\n2. Deg\n");
-			scanf_s("%d", &trig_op);
+			scanf("%d", &trig_op);
 			if (trig_op == 1) {
 				printf("Please enter the value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				if (Number_1 < -1 || Number_1 >1) {
 					printf("Please enter a valid value!!\n");
 				}
@@ -170,7 +170,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				if (Number_1 < -1 || Number_1 >1) {
 					printf("Please enter a valid value!!\n");
 				}
@@ -187,10 +187,10 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 		else if (conv == 8) {
 			printf("Choose Rad to get radians or Deg to get degrees: \n");
 			printf("1. Rad\n2. Deg\n");
-			scanf_s("%d", &trig_op);
+			scanf("%d", &trig_op);
 			if (trig_op == 1) {
 				printf("Please enter the value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				if (Number_1 < -1 || Number_1 >1) {
 					printf("Please enter a valid value!!\n");
 				}
@@ -206,7 +206,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				if (Number_1 < -1 || Number_1 >1) {
 					printf("Please enter a valid value!!\n");
 				}
@@ -224,10 +224,10 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 		else if (conv == 9) {
 			printf("Choose Rad to get radians or Deg to get degrees: \n");
 			printf("1. Rad\n2. Deg\n");
-			scanf_s("%d", &trig_op);
+			scanf("%d", &trig_op);
 			if (trig_op == 1) {
 				printf("Please enter the value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Result = atan(Number_1) / M_PI;
 				if (Result == 0) {
 					printf("atan(%f) = %f\n", Number_1, Result);
@@ -239,7 +239,7 @@ float Trig(unsigned short int conv, unsigned short int trig_op, float Number_1) 
 			}
 			else if (trig_op == 2) {
 				printf("Please enter the value: ");
-				scanf_s("%f", &Number_1);
+				scanf("%f", &Number_1);
 				Degree = Number_1;
 				Result = 180.0 * atan(Number_1) / M_PI;
 				printf("atan(%f) = %f\n", Degree, Result);
