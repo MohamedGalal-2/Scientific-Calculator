@@ -1,12 +1,12 @@
-/*Include Section*/
-#include "..\Header Files\main.h"
+/****************************************************
+*		@Author   - Mohamed Galal					*
+*		@Program  - Scientific Calculator			*
+*		@Version  - V2.6.0                          *
+*		@Updated  - 19/09/2023                      *
+*****************************************************/
 
-/**************************************************
-* @Author   - Mohamed Galal                       *
-* @Program  - Scientific Calculator			      *
-* @Version  - V2.6.0                              *
-* @Updated  - 19/09/2023                          *
-***************************************************/
+/* Include Section*/
+#include "..\Header Files\main.h"
 
 float operations(float num, ...);
 
@@ -20,42 +20,12 @@ int main() {
 			printf("%s\n", Operations[i]);
 		}
 		reset();
-		scanf_s("%d", &op);
+		scanf("%d", &op);
 		switch (op) {
 		case 1:
 			green();
 			printf("Summution:\n");
 			reset();
-			/*int i = 0;
-			long float Numbers[200] = { 0.0 };
-			long float Result[200] = 0.0;
-			char operands[200] = { 0 };
-			while (operands[i - 1] != '#')
-			{
-				scanf("%f", &Numbers[i]);
-				scanf("%c", &operands[i]);
-				i++;
-			}
-			for (int j = 0; j < i; j++)
-			{
-				if (operands[j] == '*')
-				{
-					Result[j] = (Numbers[j - 1] * Numbers[j + 1]);
-				}
-				else if (operands[j] == '/')
-				{
-					Result[j] = (Numbers[j - 1] / Numbers[j + 1]);
-				}
-				else if (operands[j] == '+')
-				{
-					Result[j] = (Numbers[j - 1] + Numbers[j + 1]);
-				}
-				else if (operands[j] == '-')
-				{
-					Result[j] = (Numbers[j - 1] - Numbers[j + 1]);
-				}
-
-			}*/
 			Summution(op, Number_1);
 			break;
 		case 2:
