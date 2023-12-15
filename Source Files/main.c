@@ -2,7 +2,6 @@
 *		@Author   - Mohamed Galal					*
 *		@Program  - Scientific Calculator			*
 *		@Version  - V2.6.0                          *
-*		@Updated  - 19/09/2023                      *
 *****************************************************/
 
 /* Include Section*/
@@ -70,7 +69,7 @@ int main() {
 			reset();
 		Fact:
 			printf("Please enter the number: ");
-			scanf_s("%d", &Number_3);
+			scanf("%d", &Number_3);
 			if (Number_3 < 0) {
 				red();
 				printf("Please enter a positive number!!\n");
@@ -93,7 +92,7 @@ int main() {
 					printf("%s\n", Units[i]);
 				}
 				reset();
-				scanf_s("%d", &op_2);
+				scanf("%d", &op_2);
 				if (op_2 == 1) {
 					Length(conv, Number_1);
 					break;
